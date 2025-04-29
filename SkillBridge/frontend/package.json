@@ -55,12 +55,13 @@
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+"scripts": {
+  "start": "cross-env PORT=3000 react-scripts start",
+  "build": "cross-env GENERATE_SOURCEMAP=false INLINE_RUNTIME_CHUNK=false react-scripts build",
+  "preview": "serve -s build -l 3000",
+  "test": "react-scripts test --watchAll=false",
+  "eject": "react-scripts eject"
+},
   "eslintConfig": {
     "extends": [
       "react-app",
